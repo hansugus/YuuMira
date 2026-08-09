@@ -1,0 +1,110 @@
+name: Bug report (English)
+description: Report reproducible unexpected behavior, crashes, or installation/update problems
+title: "[Bug][EN] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for helping improve YuuMira. Complete the fields below.
+
+        **Do not disclose a security vulnerability here.** Read the [Security Policy](https://github.com/hansugus/yuuone/security/policy) and email `support@yuuone.app`. Remove API keys, tokens, cookies, personal information, and sensitive workspace content before attaching logs or screenshots.
+
+  - type: input
+    id: version
+    attributes:
+      label: YuuMira version
+      description: Enter the full version shown in About or Settings.
+      placeholder: For example, 0.11.12
+    validations:
+      required: true
+
+  - type: dropdown
+    id: operating-system
+    attributes:
+      label: Operating system
+      options:
+        - macOS (Apple Silicon)
+        - macOS (Intel)
+        - Windows 64-bit
+        - Other
+    validations:
+      required: true
+
+  - type: input
+    id: os-version
+    attributes:
+      label: Operating-system version
+      placeholder: For example, macOS 26.0 or Windows 11 24H2
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Affected area
+      options:
+        - Installation, startup, or updates
+        - Conversations or model connections
+        - Workspaces, files, or terminal
+        - Sources, MCP, or APIs
+        - Skills, automation, or tasks
+        - Computer use or browser
+        - UI, performance, or other
+    validations:
+      required: true
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: Problem summary
+      description: Briefly explain what happened and whether it reproduces consistently.
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Provide minimal, repeatable steps.
+      placeholder: |
+        1. Open …
+        2. Select …
+        3. Run …
+        4. Observe …
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected result
+      description: What should have happened?
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual result
+      description: What happened instead? Include the complete error message.
+    validations:
+      required: true
+
+  - type: textarea
+    id: diagnostics
+    attributes:
+      label: Logs, screenshots, or additional context
+      description: Paste redacted logs or attach screenshots/recordings. Never upload credentials or sensitive data.
+      render: shell
+
+  - type: checkboxes
+    id: confirmations
+    attributes:
+      label: Submission checklist
+      options:
+        - label: I checked the documentation and existing Issues and found no duplicate.
+          required: true
+        - label: I removed API keys, tokens, cookies, personal information, and other sensitive content.
+          required: true
+        - label: This is not a security vulnerability that requires private reporting.
+          required: true

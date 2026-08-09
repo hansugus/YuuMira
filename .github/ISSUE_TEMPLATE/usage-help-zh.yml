@@ -1,0 +1,82 @@
+name: 使用求助（中文）
+description: 获取 YuuMira 配置、连接、权限或工作流方面的帮助
+title: "[Help][中文] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        请先查阅 [YuuMira 中文文档](https://agents.yuuone.app/docs/zh-Hans/)并搜索现有 Issues。
+
+        这是公开表单。请移除 API Key、Token、Cookie、个人信息，以及会话、工作区和知识库中的敏感内容。
+
+  - type: input
+    id: version
+    attributes:
+      label: YuuMira 版本
+      placeholder: 例如 0.11.12
+    validations:
+      required: true
+
+  - type: dropdown
+    id: operating-system
+    attributes:
+      label: 操作系统
+      options:
+        - macOS（Apple 芯片）
+        - macOS（Intel）
+        - Windows 64 位
+        - 其他
+    validations:
+      required: true
+
+  - type: dropdown
+    id: topic
+    attributes:
+      label: 求助主题
+      options:
+        - 安装、启动或更新
+        - 模型服务商、凭据或网络代理
+        - Sources、MCP、API 或本地文件
+        - 会话、工作区、权限或终端
+        - 技能、自动化、任务或会话目标
+        - 电脑操作、浏览器或移动访问
+        - 界面、性能或其他
+    validations:
+      required: true
+
+  - type: textarea
+    id: goal
+    attributes:
+      label: 你想完成什么
+      description: 请描述目标和使用场景。
+    validations:
+      required: true
+
+  - type: textarea
+    id: attempts
+    attributes:
+      label: 已尝试的方法
+      description: 列出已阅读的文档、配置步骤和排查结果。
+      placeholder: |
+        1. 我按照……进行配置
+        2. 我尝试了……
+        3. 当前结果是……
+    validations:
+      required: true
+
+  - type: textarea
+    id: diagnostics
+    attributes:
+      label: 错误信息或补充上下文
+      description: 可粘贴已脱敏的错误信息或日志，也可以拖入截图。
+      render: shell
+
+  - type: checkboxes
+    id: confirmations
+    attributes:
+      label: 提交确认
+      options:
+        - label: 我已查阅文档并搜索现有 Issues。
+          required: true
+        - label: 我已移除 API Key、Token、Cookie、个人信息和其他敏感内容。
+          required: true

@@ -1,0 +1,82 @@
+name: Usage help (English)
+description: Get help with YuuMira configuration, connections, permissions, or workflows
+title: "[Help][EN] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Check the [YuuMira documentation](https://agents.yuuone.app/docs/) and search existing Issues first.
+
+        This is a public form. Remove API keys, tokens, cookies, personal information, and sensitive conversation, workspace, or knowledge-base content.
+
+  - type: input
+    id: version
+    attributes:
+      label: YuuMira version
+      placeholder: For example, 0.11.12
+    validations:
+      required: true
+
+  - type: dropdown
+    id: operating-system
+    attributes:
+      label: Operating system
+      options:
+        - macOS (Apple Silicon)
+        - macOS (Intel)
+        - Windows 64-bit
+        - Other
+    validations:
+      required: true
+
+  - type: dropdown
+    id: topic
+    attributes:
+      label: Help topic
+      options:
+        - Installation, startup, or updates
+        - Model providers, credentials, or network proxy
+        - Sources, MCP, APIs, or local files
+        - Conversations, workspaces, permissions, or terminal
+        - Skills, automation, tasks, or session goals
+        - Computer use, browser, or mobile access
+        - UI, performance, or other
+    validations:
+      required: true
+
+  - type: textarea
+    id: goal
+    attributes:
+      label: What are you trying to accomplish?
+      description: Describe your goal and use case.
+    validations:
+      required: true
+
+  - type: textarea
+    id: attempts
+    attributes:
+      label: What have you tried?
+      description: List the documentation, configuration steps, and troubleshooting results you already tried.
+      placeholder: |
+        1. I configured …
+        2. I tried …
+        3. The current result is …
+    validations:
+      required: true
+
+  - type: textarea
+    id: diagnostics
+    attributes:
+      label: Error details or additional context
+      description: Paste redacted errors or logs, or attach a screenshot.
+      render: shell
+
+  - type: checkboxes
+    id: confirmations
+    attributes:
+      label: Submission checklist
+      options:
+        - label: I checked the documentation and searched existing Issues.
+          required: true
+        - label: I removed API keys, tokens, cookies, personal information, and other sensitive content.
+          required: true

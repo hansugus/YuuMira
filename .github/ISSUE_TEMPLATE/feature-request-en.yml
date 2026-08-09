@@ -1,0 +1,61 @@
+name: Feature request (English)
+description: Suggest a new capability or an improvement to an existing YuuMira workflow
+title: "[Feature][EN] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for the suggestion. Start with the problem you need to solve rather than only naming a feature. Search existing Issues first, and do not include private or sensitive content.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem to solve
+      description: What are you trying to do, and why is it difficult today?
+      placeholder: When I …, I need …, because …
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed solution
+      description: Describe the interaction, behavior, or result you would like.
+    validations:
+      required: true
+
+  - type: textarea
+    id: use-cases
+    attributes:
+      label: Use cases and audience
+      description: Who would use this? Include one or two concrete scenarios.
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives tried
+      description: How do you work around the problem today, and what is missing?
+
+  - type: input
+    id: version
+    attributes:
+      label: Related YuuMira version (optional)
+      placeholder: For example, 0.11.12
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional context
+      description: Attach redacted mockups, references, or other background if useful.
+
+  - type: checkboxes
+    id: confirmations
+    attributes:
+      label: Submission checklist
+      options:
+        - label: I searched existing Issues and found no duplicate request.
+          required: true
+        - label: I removed API keys, tokens, personal information, and other sensitive content.
+          required: true
